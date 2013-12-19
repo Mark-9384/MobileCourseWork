@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
+
+    <Button
+        android:id="@+id/HybridButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/hybrid" />
+
+    <Button
+        android:id="@+id/NormalButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TerrainButton"
+        android:layout_below="@+id/TerrainButton"
+        android:text="@string/normal" />
+
+    <Button
+        android:id="@+id/TerrainButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/HybridButton"
+        android:layout_below="@+id/HybridButton"
+        android:text="@string/terrain" />
+
+    <Button
+        android:id="@+id/HistoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TerrainButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="@string/history" />
+
+    <EditText
+        android:id="@+id/editLong"
+        android:inputType="phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/NormalButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/NormalButton"
+        android:layout_marginBottom="16dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editLong"
+        android:layout_alignLeft="@+id/editLong"
+        android:layout_alignRight="@+id/editLong"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/LongLatButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editLong"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/editLong"
+        android:text="@string/enter" />
+
+</RelativeLayout>
+
+
